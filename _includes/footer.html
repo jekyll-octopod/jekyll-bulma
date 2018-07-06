@@ -1,58 +1,51 @@
 <footer class="footer">
-  <div class="container">
-    <div class="clearfix">
-      <dl class="footer-nav">
-        <dt class="nav-title">Meta</dt>
-        <dd class="nav-item">
-	  <a href="#">Imprint</a>
-	</dd>
-      </dl>
-
-      <dl class="footer-nav">
-        <dt class="nav-title">Latest Posts</dt>
-        {% for post in site.posts limit:5 %}
-          <dd class="nav-item">
-	    <a href="{{ post.url | prepend: site.baseurl }}">
-              {{ post.title | truncate: 35 }}
-	    </a>
-	  </dd>
-        {% endfor %}
-      </dl>
-
-      <dl class="footer-nav">
-        <dt class="nav-title">Title</dt>
-        <dd class="nav-item">
-          <a href="#">Link</a>
-        </dd>
-      </dl>
-
-      <dl class="footer-nav">
-        <dt class="nav-title">Title</dt>
-        <dd class="nav-item">
-          <a href="mailto://mail@example.com">
-            <i class="fa fa-envelope" aria-hidden="true"></i> &nbsp;
-            mail@example.com
-          </a>
-        </dd>
-        <dd class="nav-item">
-          <a href="https://www.twitter.com/twitter-handle">
-            <i class="fa fa-twitter" aria-hidden="true"></i> &nbsp;
-            @twitter-handle
-          </a>
-        </dd>
-      </dl>
+  <div class="columns">
+    <div class="column">
+      <h1 class="is-title">Meta</h1>
+      <a href="#">Imprint</a>
     </div>
 
-    <div class="footer-copyright text-center">
-      {{ site.title }} | &nbsp;
-      <a href="{{ site.url }}">your.awesome.domain</a>
+    <div class="column">
+      <h1 class="is-title">Latest Posts</h1>
+      {%- for post in site.posts limit:5 -%}
+        <a href="{{ post.url | prepend: site.baseurl }}">
+          {{ post.title | truncate: 35 }}
+        </a>
+      {%- endfor -%}
+    </div>
+
+    <div class="column">
+      <h1 class="is-title">Title</h1>
+      <a href="#">Link</a>
+    </div>
+
+    <div class="column">
+      <h1 class="is-title">Title</h1>
+      <ul>
+        <li>
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          mail@example.com
+        </li>
+        <li>
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
+          @twitter-handle
+        </li>
+      </ul>
     </div>
   </div>
 
-  {%- if page.custom_js -%}
-    {%- for js_file in page.custom_js -%}
-      <script src='{{ site.url }}/js/{{ js_file }}.js'
-              type="text/javascript"></script>
-    {%- endfor -%}
-  {%- endif -%}
+  <div class="has-text-centered">
+    {{ site.title }} | &nbsp;
+  </div>
 </footer>
+
+{%- if page.custom_js -%}
+  {%- for js_file in page.custom_js -%}
+    <script src='{{ site.url }}/js/{{ js_file }}.js'
+            type="text/javascript"></script>
+  {%- endfor -%}
+{%- endif -%}

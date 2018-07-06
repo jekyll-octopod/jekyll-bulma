@@ -1,41 +1,39 @@
-<header class="site-header">
-  <nav class="navbar navbar-default light-grey">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button"
-                class="navbar-toggle collapsed"
-                data-toggle="collapse"
-                data-target="#navbar"
-                aria-expanded="false"
-                aria-controls="navbar">
-          <span class="sr-only">Navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
+<nav class="navbar is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+    </a>
 
-        <a href="/">
-          <img src="{{ site.url }}/assets/img/logo.png"
-               height="65">
-        </a>
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <div class="navbar-item">
+        <a href="#">A link</a>
       </div>
-
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav">
-          <li class="dropdown">
-            <a aria-expanded="false"
-               aria-haspopup="true"
-               class="dropdown-toggle"
-               data-toggle="dropdown"
-               href="#"
-               role="button">
-              Welcome <span class="caret"></span>
-            </a>
-          </li>
-          <li><a href="#">A link</a></li>
-          <li><a href="#">Another link</a></li>
-        </ul>
-      </div><!--/.nav-collapse -->
+      <div class="navbar-item">
+        <a href="#">Another link</a>
+      </div>
     </div>
-  </nav>
-</header>
+
+    <div class="navbar-end">
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link" href="#">A Dropdown</a>
+
+        <div class="navbar-dropdown">
+          <div class="navbar-item">
+            <a href="#">A link</a>
+          </div>
+          <div class="navbar-item">
+            <a href="#">Another link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
