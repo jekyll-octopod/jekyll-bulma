@@ -14,15 +14,15 @@
                    {{ site.description }}
                  {%- endif -%}">
 
-  <link href='https://fonts.googleapis.com/css?family=Ubuntu'
+  <link href="{{ '/assets/fonts/ubuntu/ubuntu-v11-latin-ext_latin-regular.woff' | prepend:site.baseurl }}"
         rel='stylesheet'
         type='text/css'>
   <link rel="stylesheet"
-        href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+        href="{{ '/assets/css/main.css' | prepend: site.baseurl }}">
   <link rel="canonical"
         href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate"
         type="application/rss+xml"
         title="{{ site.title }}"
-        href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+        href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}">
 </head>
