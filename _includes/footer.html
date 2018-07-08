@@ -1,12 +1,12 @@
 <footer class="footer">
   <div class="columns">
     <div class="column">
-      <h1 class="is-title">Meta</h1>
+      <h1 class="title">Meta</h1>
       <a href="#">Imprint</a>
     </div>
 
     <div class="column">
-      <h1 class="is-title">Latest Posts</h1>
+      <h1 class="title">Latest Posts</h1>
       {%- for post in site.posts limit:5 -%}
         <a href="{{ post.url | prepend: site.baseurl }}">
           {{ post.title | truncate: 35 }}
@@ -15,12 +15,12 @@
     </div>
 
     <div class="column">
-      <h1 class="is-title">Title</h1>
+      <h1 class="title">Title</h1>
       <a href="#">Link</a>
     </div>
 
     <div class="column">
-      <h1 class="is-title">Title</h1>
+      <h1 class="title">Title</h1>
       <ul>
         <li>
           <span class="icon">
