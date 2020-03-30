@@ -2,11 +2,11 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-bulma"
-  spec.version       = "0.8.1"
+  spec.version       = "0.9.0"
   spec.authors       = ["Stefan Haslinger"]
   spec.email         = ["stefan.haslinger@panoptikum.io"]
 
-  spec.summary       = %q{Bulma + Fontawesome + Theme = jekyll-bulma}
+  spec.summary       = %q{Bulma + LineAwesome + Theme = jekyll-bulma}
   spec.homepage      = "http://github.com/jekyll-octopod/jekyll-bulma"
   spec.license       = "MIT"
 
